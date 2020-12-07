@@ -15,9 +15,21 @@ repositories {
 	maven { url 'https://repo.spring.io/milestone' }
 }
 
+ext {
+	set('springCloudVersion', "2020.0.0-M6")
+}
+
+dependencyManagement {
+    imports { 
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Greenwich.RELEASE" 
+    }
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	
+	compile   'org.springframework.cloud:spring-cloud-starter-openfeign'
 	compile  'javax.servlet:jstl'
 	compile  'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
 	compile  'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
@@ -27,6 +39,12 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 bootWar {

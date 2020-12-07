@@ -32,17 +32,9 @@ tomcat:
     ajp: 
         remoteauthentication: false
         enabled: true
-
-#---
-#
-#spring:
-#    profiles: dev
-#server:
-#    port: 8080
-#
-#---
-#
-#spring:
-#    profiles: test
-#server:
-#    port: 8888
+        
+# -- Eureka client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761/eureka/}
