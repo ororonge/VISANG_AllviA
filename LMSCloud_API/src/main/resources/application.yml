@@ -1,39 +1,39 @@
 spring:
   application:
     name: LMSCloud_API
-    profiles:
-        active: dev
-    mvc: 
-        view: 
-            prefix: /WEB-INF/jsp/
-            suffix: .jsp
-    datasource:
-        type: com.zaxxer.hikari.HikariDataSource
-        hikari: 
-            minimumIdle: 5
-            maximumPoolSize: 20
-            idleTimeout: 30000
-            poolName: SpringBootJPAHikariCP
-            maxLifetime: 2000000
-            connectionTimeout: 30000
+  profiles:
+    active: dev
+  mvc: 
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari: 
+      minimumIdle: 5
+      maximumPoolSize: 20
+      idleTimeout: 30000
+      poolName: SpringBootJPAHikariCP
+      maxLifetime: 2000000
+      connectionTimeout: 30000
 
 log4jdbc:
-    drivers: org.mariadb.jdbc.Driver
-    spylogdelegator: 
-        name: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
-    dump: 
-        sql:
-            maxlinelength: 0
+  drivers: org.mariadb.jdbc.Driver
+  spylogdelegator: 
+    name: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+  dump: 
+    sql:
+      maxlinelength: 0
 
 mybatis: 
-    configuration: 
-        map-underscore-to-camel-case: true
-    config-location: mybatis/mybatis-config.xml
+  configuration: 
+    map-underscore-to-camel-case: true
+  config-location: mybatis/mybatis-config.xml
 
 tomcat: 
-    ajp: 
-        remoteauthentication: false
-        enabled: true
+  ajp: 
+    remoteauthentication: false
+    enabled: true
         
 # -- Eureka client
 eureka:
