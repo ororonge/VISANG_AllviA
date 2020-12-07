@@ -43,7 +43,7 @@ dependencyManagement {
 
 bootWar {
 	
-	archiveName 'LMS_Web.war'
+	archiveName 'LMSCloud_Web.war'
 	
 	// properties ¼³Á¤
     sourceSets {
