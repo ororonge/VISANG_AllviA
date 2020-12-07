@@ -5,7 +5,6 @@ plugins {
 	id 'war'
 }
 
-ext.activePf = 'fel40'
 group = 'com.platform.web'
 version = '0.0.1-SNAPSHOT'
 
