@@ -15,14 +15,6 @@ spring:
       maxLifetime: 2000000
       connectionTimeout: 30000
 
-log4jdbc:
-  drivers: org.mariadb.jdbc.Driver
-  spylogdelegator: 
-    name: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
-  dump: 
-    sql:
-      maxlinelength: 0
-
 mybatis: 
   configuration: 
     map-underscore-to-camel-case: true
