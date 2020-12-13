@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: web-main
   profiles:
     active: fel40
   mvc: 

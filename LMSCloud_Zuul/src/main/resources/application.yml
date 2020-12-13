@@ -12,4 +12,4 @@ zuul:
     api:
       strip-prefix: false
       path: /api/*/**
-      service-id: LMSCloud_APIMain
+      service-id: api-main
